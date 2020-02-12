@@ -1,0 +1,131 @@
+<!--html documents-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+   	
+      <title>Food App</title>
+      
+      <!--css file-->
+      
+       <style>
+         .top-food {
+         background-color:lightblue;
+         padding: 30px;
+         }
+         
+         .bottom-color{
+         background-color:darkgray;
+         margin-bottom:2px;
+         padding: 10px;
+         }
+         
+         .float-img {
+         float: left ;
+         margin-right:10px ; 
+         margin-bottom:5px ; 
+         margin-top:15px ;
+         border: solid black 1px; 
+         padding : 2px;
+         }
+         
+         h1{
+         font-size: 35px;
+         font-family:Arial, Helvetica;
+         color: black;
+         text-align: center;
+         }
+         
+         h3{
+         font-size:20px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: black;
+         text-align: center;
+         }
+         
+         h5{
+         font-size:20px;
+         font-family: Comic Sans MS;
+         color: black;
+         margin-top:-100;
+         }
+         
+         h4{
+         font-size:15px;
+         font-family: Comic Sans MS;
+         color: black;
+         }
+         
+         .footer-color{
+         background-color:seagreen;
+         padding: 120px;
+         text-align: center;
+         font-size:20px;
+         bottom:0px;
+         }
+        
+      </style>
+      
+      <!--css file ends here -->
+      
+   </head>
+   <body>
+      <div class = "set_center">
+         <div class = "top-food" >
+            <h1>
+            Food Recipes |  Indian Cuisine 
+            <h1>
+            	
+            	<!--shows the title of the cuisine -->
+            
+            <h3> Menu | {{ rt }}</h3>
+         </div>
+      </div>
+      
+      <!--shows the image of cuisine -->
+      
+      
+      <div class = "bottom-color">
+         <img src="{{ ri }}" width = "400" height = "390"  class = "float-img"/>
+         
+         <!--cooking time display-->
+         
+         <p><em><strong> Cooking time | {{rT}} minutes </strong></em></p>
+         
+         <!--ingredient list printout as string-->
+         
+         <h5> <strong><u> List of Ingredients </u></strong></h5>
+         <h4>
+            <li>{{ ingredient_json }}</li>
+         </h4>
+         <strong>
+            <hr>
+         </strong>
+         <em>
+         	
+         <!--link to the recipe website -->
+            
+            <p><strong>Click <a href = {{flink}} target="_blank" >here</a> for more details.</strong></p>
+         </em>
+         <hr>
+         
+         <!--twitter logo and quotes display-->
+         
+         <p><strong><em>Recent tweets </em></strong>  <img src = "/static/twitter.png" width = 22px height = 24px >: <q>{{randtweet}} </q></p>
+         <br><br><br><br><br><br><br><br><br>
+      </div>
+      
+      <!-- Footer -->
+      
+      <div class ="footer-color" >
+         <footer>
+            <p> <strong>Designed by <a href="https://github.com/Norbeen" title="norbeen" target="_blank" > Nabin   <img src = "/static/github.png" height = 25px width = 30px >  </a> </p>
+         </footer>
+         
+      <!--footer ends-->
+      
+      </div>
+   </body>
+</html>
+
+      <!--end of html-->
