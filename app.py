@@ -13,7 +13,7 @@ def index():
 
 #API to search for indian cuisine 
 
-    url2 = "https://api.spoonacular.com/recipes/search?cuisine=indian%20free&apiKey=SPOONACULAR_KEY"
+    url2 = "https://api.spoonacular.com/recipes/search?cuisine=indian%20free&apiKey=7e4bf9cab7ab42b1aa7d886374bf0b51"
 
     response2 = requests.get(url2)
     json_body2 = response2.json()
@@ -34,7 +34,7 @@ def index():
 
 # fetching the ingredient list using url3 API
     
-    url3 = "https://api.spoonacular.com/recipes/" + recipe_id + "/ingredientWidget.json?apiKey=SPOONACULAR_KEY"
+    url3 = "https://api.spoonacular.com/recipes/" + recipe_id + "/ingredientWidget.json?apiKey=7e4bf9cab7ab42b1aa7d886374bf0b51"
     response3 = requests.get(url3)
     json_body3 = response3.json()
 
@@ -57,7 +57,7 @@ def index():
    
 # fetching the recipe website using the url 4
     
-    url4 = "https://api.spoonacular.com/recipes/" + recipe_id + "/information?apiKey=SPOONACULAR_KEY"
+    url4 = "https://api.spoonacular.com/recipes/" + recipe_id + "/information?apiKey=7e4bf9cab7ab42b1aa7d886374bf0b51"
     response4 = requests.get(url4)
     json_body4 = response4.json()
  
